@@ -1,0 +1,14 @@
+{
+	"required": true,
+	"package": "com.supershort.mixin",
+	"compatibilityLevel": "JAVA_25",
+	"mixins": [
+		"MixinTreeCutEvents"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}

@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "jobplusharvest",
+	"version": "${version}",
+	"name": "Jobs+ Harvest Addon",
+	"description": "Implements Tree harvester to the lumberjack job.",
+	"authors": [
+		"supershort"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "Apache-2.0",
+	"icon": "assets/jobplusharvest/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.supershort.Jobplusharvestaddon"
+		],
+		"client": [
+			"com.supershort.client.JobplusharvestClient"
+		]
+	},
+	"mixins": [
+		"jobplusharvest.mixins.json",
+		{
+			"config": "jobplusharvest.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~26.1.2",
+		"java": ">=25",
+		"fabric-api": "*",
+		"arc": "*",
+		"jobsplus": "*"
+	}
+}
